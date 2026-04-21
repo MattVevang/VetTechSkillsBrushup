@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vet Tech Skills Brushup — Quiz</title>
+  <meta name="description" content="A fun, gamified multiple-choice quiz for veterinary technicians brushing up on clinical knowledge. 270+ questions across 13 categories.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ======== LANDING VIEW ======== -->
+  <div id="landing" class="view active">
+    <div class="landing-container">
+      <div class="landing-hero">
+        <div class="logo-icon">🩺</div>
+        <h1>Vet Tech<br><span class="accent">Skills Brushup</span></h1>
+        <p class="subtitle">A quick, fun way to test &amp; refresh your clinical knowledge across the full scope of vet tech responsibilities.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" id="total-questions">270</span>
+          <span class="stat-label">Questions</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">13</span>
+          <span class="stat-label">Categories</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">10</span>
+          <span class="stat-label">Per Quiz</span>
+        </div>
+      </div>
+
+      <div class="category-pills" id="category-pills"></div>
+
+      <button class="btn-primary btn-start" id="start-btn">
+        <span>Start Quiz</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <p class="landing-note">10 random questions each time — every session is different!</p>
+    </div>
+  </div>
+
+  <!-- ======== QUIZ VIEW ======== -->
+  <div id="quiz" class="view">
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <div class="progress-info">
+          <span id="question-counter">1 of 10</span>
+          <span id="score-display" class="score-badge">Score: 0</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <div class="question-card" id="question-card">
+        <div class="question-meta">
+          <span class="category-badge" id="category-badge"></span>
+        </div>
+        <h2 class="question-text" id="question-text"></h2>
+        <div class="answers-list" id="answers-list"></div>
+        <div class="feedback-panel hidden" id="feedback-panel">
+          <div class="feedback-result" id="feedback-result"></div>
+          <div class="feedback-explanation" id="feedback-explanation"></div>
+          <div class="feedback-source" id="feedback-source"></div>
+        </div>
+        <button class="btn-primary btn-next hidden" id="next-btn">
+          <span id="next-btn-text">Next Question</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== RESULTS VIEW ======== -->
+  <div id="results" class="view">
+    <div class="results-container">
+      <div class="results-card">
+        <div id="results-icon" class="results-icon"></div>
+        <h2 id="results-title" class="results-title"></h2>
+        <div class="results-score">
+          <span class="score-big" id="final-score"></span>
+          <span class="score-label">out of 10</span>
+        </div>
+        <p id="results-message" class="results-message"></p>
+        <div id="results-breakdown" class="results-breakdown"></div>
+        <button class="btn-primary btn-start" id="play-again-btn">
+          <span>Play Again</span>
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12m0 0l-4-4m4 4l-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
