@@ -36,46 +36,50 @@
   let answered = false;
   let results = []; // track correct/incorrect per question
 
-  // DOM references
-  const views = {
-    landing: document.getElementById('landing'),
-    quiz: document.getElementById('quiz'),
-    results: document.getElementById('results'),
-  };
-
-  const els = {
-    totalQuestions: document.getElementById('total-questions'),
-    categoryPills: document.getElementById('category-pills'),
-    startBtn: document.getElementById('start-btn'),
-    questionCounter: document.getElementById('question-counter'),
-    scoreDisplay: document.getElementById('score-display'),
-    progressFill: document.getElementById('progress-fill'),
-    categoryBadge: document.getElementById('category-badge'),
-    questionText: document.getElementById('question-text'),
-    answersList: document.getElementById('answers-list'),
-    feedbackPanel: document.getElementById('feedback-panel'),
-    feedbackResult: document.getElementById('feedback-result'),
-    feedbackExplanation: document.getElementById('feedback-explanation'),
-    feedbackSource: document.getElementById('feedback-source'),
-    nextBtn: document.getElementById('next-btn'),
-    nextBtnText: document.getElementById('next-btn-text'),
-    resultsIcon: document.getElementById('results-icon'),
-    resultsTitle: document.getElementById('results-title'),
-    finalScore: document.getElementById('final-score'),
-    resultsMessage: document.getElementById('results-message'),
-    resultsBreakdown: document.getElementById('results-breakdown'),
-    playAgainBtn: document.getElementById('play-again-btn'),
-    startOverBtn: document.getElementById('start-over-btn'),
-  };
+  // DOM references — populated in init() to guarantee DOM is ready
+  var views = {};
+  var els = {};
 
   // ===== INITIALIZATION =====
   function init() {
+    views = {
+      landing: document.getElementById('landing'),
+      quiz: document.getElementById('quiz'),
+      results: document.getElementById('results'),
+    };
+
+    els = {
+      totalQuestions: document.getElementById('total-questions'),
+      categoryPills: document.getElementById('category-pills'),
+      startBtn: document.getElementById('start-btn'),
+      questionCounter: document.getElementById('question-counter'),
+      scoreDisplay: document.getElementById('score-display'),
+      progressFill: document.getElementById('progress-fill'),
+      categoryBadge: document.getElementById('category-badge'),
+      questionText: document.getElementById('question-text'),
+      answersList: document.getElementById('answers-list'),
+      feedbackPanel: document.getElementById('feedback-panel'),
+      feedbackResult: document.getElementById('feedback-result'),
+      feedbackExplanation: document.getElementById('feedback-explanation'),
+      feedbackSource: document.getElementById('feedback-source'),
+      nextBtn: document.getElementById('next-btn'),
+      nextBtnText: document.getElementById('next-btn-text'),
+      resultsIcon: document.getElementById('results-icon'),
+      resultsTitle: document.getElementById('results-title'),
+      finalScore: document.getElementById('final-score'),
+      resultsMessage: document.getElementById('results-message'),
+      resultsBreakdown: document.getElementById('results-breakdown'),
+      playAgainBtn: document.getElementById('play-again-btn'),
+      startOverBtn: document.getElementById('start-over-btn'),
+    };
+
     els.totalQuestions.textContent = QUESTIONS.length;
     renderCategoryPills();
+
     els.startBtn.addEventListener('click', startQuiz);
     els.nextBtn.addEventListener('click', nextQuestion);
     els.playAgainBtn.addEventListener('click', startQuiz);
-    els.startOverBtn.addEventListener('click', startQuiz);
+    els.startOverBtn.addEventListener('click', function () { startQuiz(); });
   }
 
   function renderCategoryPills() {
