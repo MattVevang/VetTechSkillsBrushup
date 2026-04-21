@@ -65,6 +65,7 @@
     resultsMessage: document.getElementById('results-message'),
     resultsBreakdown: document.getElementById('results-breakdown'),
     playAgainBtn: document.getElementById('play-again-btn'),
+    startOverBtn: document.getElementById('start-over-btn'),
   };
 
   // ===== INITIALIZATION =====
@@ -74,6 +75,11 @@
     els.startBtn.addEventListener('click', startQuiz);
     els.nextBtn.addEventListener('click', nextQuestion);
     els.playAgainBtn.addEventListener('click', startQuiz);
+    els.startOverBtn.addEventListener('click', goHome);
+  }
+
+  function goHome() {
+    showView('landing');
   }
 
   function renderCategoryPills() {

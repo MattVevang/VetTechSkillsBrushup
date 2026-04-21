@@ -53,7 +53,13 @@
       <div class="quiz-header">
         <div class="progress-info">
           <span id="question-counter">1 of 10</span>
-          <span id="score-display" class="score-badge">Score: 0</span>
+          <div class="header-right">
+            <span id="score-display" class="score-badge">Score: 0</span>
+            <button class="btn-start-over" id="start-over-btn" title="Start Over">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8a6 6 0 1 1 1.76 4.24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M2 12V8h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Start Over</span>
+            </button>
+          </div>
         </div>
         <div class="progress-bar">
           <div class="progress-fill" id="progress-fill"></div>
