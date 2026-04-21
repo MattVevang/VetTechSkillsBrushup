@@ -5,7 +5,7 @@ const QUESTIONS = [
     "question": "During a veterinary dental prophylaxis, what is the correct order of the major procedural steps after the patient is anesthetized and intubated?",
     "answers": [
       {
-        "text": "Oral exam → gross calculus removal → supragingival scaling → subgingival scaling → polishing → probing/charting → irrigation → radiographs",
+        "text": "Oral exam → radiographs → gross calculus removal → supragingival scaling → subgingival scaling → polishing → probing/charting → irrigation",
         "correct": true
       },
       {
@@ -13,7 +13,7 @@ const QUESTIONS = [
         "correct": false
       },
       {
-        "text": "Radiographs → scaling → polishing → probing → irrigation",
+        "text": "Oral exam → scaling → polishing → probing → irrigation → radiographs",
         "correct": false
       },
       {
@@ -21,7 +21,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "The standard sequence starts with an oral exam to note obvious pathology, then removes gross calculus before detailed scaling (supra- then subgingival), polishing to smooth micro-scratches, probing/charting to document pocket depths, irrigation to flush debris, and finally radiographs to evaluate structures below the gumline.",
+    "explanation": "Per AVDC and AAHA Dental Care Guidelines, the standard COHAT sequence starts with an oral exam to note obvious pathology, followed by full-mouth intraoral radiographs to identify subgingival disease before treatment begins. Then gross calculus is removed, followed by detailed scaling (supra- then subgingival), polishing to smooth micro-scratches, probing/charting to document pocket depths, and irrigation to flush debris.",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -785,7 +785,7 @@ const QUESTIONS = [
     "question": "What is the normal heart rate range for a cat under anesthesia?",
     "answers": [
       {
-        "text": "120–180 bpm",
+        "text": "100–180 bpm",
         "correct": true
       },
       {
@@ -801,7 +801,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "Anesthetized cats normally maintain a heart rate of 120-180 bpm. Rates below 100 bpm in a cat are concerning for significant bradycardia and may require atropine or glycopyrrolate.",
+    "explanation": "Anesthetized cats normally maintain a heart rate of 100-180 bpm. Rates below 100 bpm in a cat are concerning for significant bradycardia and may require atropine or glycopyrrolate.",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -1745,7 +1745,7 @@ const QUESTIONS = [
     "question": "In dogs, the most clinically significant blood type for transfusion is:",
     "answers": [
       {
-        "text": "DEA 1.1 (Dog Erythrocyte Antigen 1.1)",
+        "text": "DEA 1 (Dog Erythrocyte Antigen 1)",
         "correct": true
       },
       {
@@ -1761,7 +1761,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "DEA 1.1 is the most antigenic canine blood type and the most likely to cause a significant transfusion reaction. DEA 1.1 negative dogs are considered \"universal donors.\" All donor dogs should be typed for at minimum DEA 1.1.",
+    "explanation": "DEA 1 (formerly subdivided as DEA 1.1/1.2, now reclassified as a single antigen per current ISBT nomenclature) is the most antigenic canine blood type and the most likely to cause a significant transfusion reaction. DEA 1 negative dogs are considered \"universal donors.\" All donor dogs should be typed for at minimum DEA 1.",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -1881,7 +1881,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "Standard steam autoclave sterilization uses 121°C (250°F) at 15 psi for at least 30 minutes for wrapped packs. A \"flash\" cycle at 134°C (273°F) can be used for 3-10 minutes for unwrapped instruments in emergencies, but is not ideal.",
+    "explanation": "Standard steam autoclave sterilization uses 121°C (250°F) at 15 psi for at least 30 minutes for wrapped packs. A \"flash\" (immediate-use) cycle at 132°C (270°F) can be used for 3-10 minutes for unwrapped instruments in emergencies, but is not ideal.",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -2511,7 +2511,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "Early compensatory shock in dogs presents with tachycardia, weak/bounding pulses, pale mucous membranes, prolonged CRT, and hypotension. Cats may present differently — they often show bradycardia and hypothermia in decompensated shock.",
+    "explanation": "Shock in dogs progresses through stages. In early compensatory shock, tachycardia and bounding pulses develop as the body attempts to maintain blood pressure; membranes may be hyperemic (injected) with rapid CRT. As shock progresses to decompensatory stages, hypotension, weak/thready pulses, pale or muddy membranes, and prolonged CRT develop. Bradycardia and hypertension are not typical of any shock stage. Cats differ — they often present with bradycardia and hypothermia in decompensated shock.",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -3651,7 +3651,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "SID = semel in die (once daily), also written as q24h. BID = bis in die (twice daily/q12h). TID = ter in die (three times daily/q8h). QID = quarter in die (four times daily/q6h). Note: SID is veterinary-specific; human medicine uses \"QD.\"",
+    "explanation": "SID = semel in die (once daily), also written as q24h. BID = bis in die (twice daily/q12h). TID = ter in die (three times daily/q8h). QID = quater in die (four times daily/q6h). Note: SID is veterinary-specific; human medicine uses \"QD.\"",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -4296,7 +4296,7 @@ const QUESTIONS = [
   {
     "id": "Q1.17",
     "category": "Dental Procedures",
-    "question": "Which ultrasonic scaler type uses a stack of metal discs or rings that expand and contract to generate vibration?",
+    "question": "Which ultrasonic scaler type uses a stack of thin metal strips (laminations) that expand and contract in a magnetic field to generate vibration?",
     "answers": [
       {
         "text": "Magnetostrictive scaler",
@@ -5307,7 +5307,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "Telazol contains tiletamine (a dissociative anesthetic related to ketamine) and zolazepam (a benzodiazepine). Both components are Schedule III, making Telazol a Schedule III controlled substance requiring appropriate documentation and secure storage.",
+    "explanation": "Telazol contains tiletamine (a dissociative anesthetic related to ketamine, Schedule III) and zolazepam (a benzodiazepine, individually Schedule IV). The combination product is classified at the higher schedule (III), making Telazol a Schedule III controlled substance requiring appropriate documentation and secure storage.",
     "sources": [
       {
         "name": "DEA Controlled Substance Schedules",
@@ -5483,7 +5483,7 @@ const QUESTIONS = [
     "question": "The beyond-use date (BUD) for a compounded non-sterile preparation (when no stability data exists) is typically:",
     "answers": [
       {
-        "text": "180 days or less, per USP <795> guidelines",
+        "text": "Up to 90 days for non-aqueous formulations (shorter for aqueous), per revised USP <795>",
         "correct": true
       },
       {
@@ -5499,7 +5499,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "Per USP <795>, non-sterile compounded preparations without stability studies should be assigned a BUD not exceeding 180 days (or the earliest expiration of any ingredient, whichever is shorter). Sterile compounds have shorter BUDs per USP <797>.",
+    "explanation": "Per the revised USP <795> (effective November 2023), non-sterile compounded preparations without stability data are assigned default BUDs based on formulation type: up to 90 days for non-aqueous preparations, 14 days (refrigerated) for water-containing oral formulations, and 30 days for water-containing topical/mucosal preparations. Sterile compounds have shorter BUDs per USP <797>.",
     "sources": [
       {
         "name": "USP Chapter <795> Pharmaceutical Compounding — Nonsterile Preparations"
@@ -6600,7 +6600,7 @@ const QUESTIONS = [
     "question": "A modified Glasgow Coma Scale score in veterinary medicine ranges from:",
     "answers": [
       {
-        "text": "1-18, with lower scores indicating more severe neurological dysfunction",
+        "text": "3-18, with lower scores indicating more severe neurological dysfunction",
         "correct": true
       },
       {
@@ -6616,7 +6616,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "The modified Glasgow Coma Scale for small animals evaluates motor activity (1-6), brainstem reflexes (1-6), and level of consciousness (1-6), scoring 1-18. Scores ≤8 indicate a grave prognosis. It is used to monitor head trauma patients and guide treatment decisions.",
+    "explanation": "The modified Glasgow Coma Scale for small animals evaluates motor activity (1-6), brainstem reflexes (1-6), and level of consciousness (1-6). Since each subscale has a minimum of 1, the total ranges from 3-18. Scores ≤8 indicate a grave prognosis. It is used to monitor head trauma patients and guide treatment decisions.",
     "sources": [
       {
         "name": "Platt & Olby, BSAVA Manual of Canine and Feline Neurology"
