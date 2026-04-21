@@ -75,11 +75,7 @@
     els.startBtn.addEventListener('click', startQuiz);
     els.nextBtn.addEventListener('click', nextQuestion);
     els.playAgainBtn.addEventListener('click', startQuiz);
-    els.startOverBtn.addEventListener('click', goHome);
-  }
-
-  function goHome() {
-    showView('landing');
+    els.startOverBtn.addEventListener('click', startQuiz);
   }
 
   function renderCategoryPills() {
