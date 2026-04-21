@@ -21,7 +21,7 @@ const QUESTIONS = [
         "correct": false
       }
     ],
-    "explanation": "Per AVDC and AAHA Dental Care Guidelines, the standard COHAT sequence starts with an oral exam to note obvious pathology, followed by full-mouth intraoral radiographs to identify subgingival disease before treatment begins. Then gross calculus is removed, followed by detailed scaling (supra- then subgingival), polishing to smooth micro-scratches, probing/charting to document pocket depths, and irrigation to flush debris.",
+    "explanation": "The standard COHAT sequence (per veterinary dental textbooks such as Holmstrom and Bellows) starts with an oral exam to note obvious pathology, followed by full-mouth intraoral radiographs to identify subgingival disease before treatment begins. Then gross calculus is removed, followed by detailed scaling (supra- then subgingival), polishing to smooth micro-scratches, probing/charting to document pocket depths, and irrigation to flush debris.",
     "sources": [
       {
         "name": "Standard veterinary technician education references (e.g., McCurnin's Clinical Textbook, Plumb's Veterinary Drug Handbook, Merck Veterinary Manual)"
@@ -602,7 +602,7 @@ const QUESTIONS = [
   {
     "id": "Q2.9",
     "category": "Vaccine Administration",
-    "question": "Which of the following is a core vaccine for cats?",
+    "question": "Which of the following is a core vaccine for all cats regardless of age or lifestyle?",
     "answers": [
       {
         "text": "FVRCP (Feline Viral Rhinotracheitis, Calicivirus, Panleukopenia)",
@@ -2615,7 +2615,7 @@ const QUESTIONS = [
     "question": "Grapes and raisins are toxic to dogs primarily because they cause:",
     "answers": [
       {
-        "text": "Acute kidney injury (nephrotoxicity) — the specific toxic agent is still unknown",
+        "text": "Acute kidney injury (nephrotoxicity) — tartaric acid is suspected but not yet definitively confirmed as the toxic agent",
         "correct": true
       },
       {
